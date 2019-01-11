@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Vivacious</string>
+    <string name="Head">Vivacity</string>
+    <string name="display_Events">Events</string>
+    <string name="display_Gallery">Gallery</string>
+    <string name="display_Pronites">Pronites</string>
+    <string name="display_about_us">About Us</string>
+    <string name="display_ContactUs">Contact Us</string>
+    <string name="display_Map">MAP</string>
+    <string name="fun_events">Fun Events</string>
+    <string name="ongoing">On Going</string>
+    <string name="sponsors">Sponsors</string>
+    <string name="display_team">Team</string>
+    <string name="developer">Developer</string>
+    <string name="others">Others</string>
+    <string name="bus">Bus Schedule</string>
+
+    <string name="title_activity_maps">Map</string>
+
+    <string name="title_activity_launcher">Launcher</string>
+    <string name="Address">"Address:   Rupa ki Nangal,\nPost-Sumel, Via-JamdoliSumel,\nJaipur, Rajasthan 302031"</string>
+    <string name="contact1">"Ateet Tiwari\n+91-9001757535</string>
+    <string name="contact2">"Prabhat Sharma\n+91-7006638382</string>
+    <string name="email">E-mail: vivacity2k19@gmail.com</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+
+
+    <string name="art">"ART 'N' CRAFT"</string>
+    <string name="fashion">"LIFE 'N' STYLE"</string>
+    <string name="music">"MUSIC</string>
+    <string name="dance">DANCE</string>
+    <string name="gaming">GAMING</string>
+    <string name="drama">DRAMATICS</string>
+    <string name="imagi">PHOTOGRAPHY</string>
+    <string name="openmic">"SPOTLIGHT\n(Open Mic)"</string>
+    <string name="ifp">INDIAN FILM PROJECT</string>
+    <string name="sahoyag">"SAHYOG\n(Social Cause)"</string>
+    <string name="masterchef">MASTERCHEF</string>
+    <string name="ipl">IPL AUCTION 3.0</string>
+    <string name="literary">LITERARY</string>
+
+
+    <string name="about">Vivacity, in its existence is one of the most lively and animated jubilation that youth has ever experienced. This Cultural festival today has snowballed to a popularity of 45,000+ facebook followers, views on its youtube channel; all of which can be attributed to the acuminous student committee that have piloted this fest in its odyssey so far. With the last year\'s triumphant theme of "A Surreal Symphony Vivacity has entranced the interest of a motley crowd of more than 20,000 participants from various colleges all over the nation. Vivacity is a juxtaposition of several contentions of dance, music, dramatics, fashion and literature (of which Raddrock, Razzmatazz, Vogue, Pronite are the major fascination), with sundry informal fun events, authorized workshops, exhibitions and gaming challenges. The brimming talents who are judged by distinguished virtuoso via their way to win titanic prizes. The Jal Band, Euphoria, Mohit Chauhan, Javed Ali, Mohammed Irfan, DJ NYK, Raeth Band, Nikhil D\'Souza, Hardy Sandhu, Ritviz, Zenith are some of those archetypes of music industry who have bedazzled the Pronites, enrapturing the vivacious crowd.
+We the core committee behind Vivacity have accepted the baton of excellence and our first agenda is to extend a proud invitation to this joie de vivre. Come and be a part of this artistic masterpiece ! Come and be a part of Vivacity 2019 !
+</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Day1">Day 1</string>
+    <string name="Day2">Day 2</string>
+    <string name="Day3">Day 3</string>
+    <string name="AllEvents">All</string>
+    <string name="OnGoing">"On\nGoing"</string>
+</resources>

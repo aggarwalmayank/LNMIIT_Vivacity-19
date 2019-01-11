@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="100"
+        android:scrollbarSize="4dp"
+        android:scrollbarThumbVertical="@color/scroll"
+        tools:context=".DanceEvents">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageButton
+                android:id="@+id/tangle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalduetdance1" />
+
+            <ImageButton
+                android:id="@+id/mudra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tangle"
+                android:layout_alignParentRight="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalmudra1" />
+
+            <ImageButton
+                android:id="@+id/razz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mudra"
+                android:layout_alignParentLeft="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalrazzmatazz1" />
+
+            <ImageButton
+                android:id="@+id/pump"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/razz"
+                android:layout_alignParentRight="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalpump1" />
+
+
+            <ImageButton
+                android:id="@+id/outlaw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pump"
+                android:layout_alignParentLeft="true"
+                android:onClick="onclick"
+                android:src="@drawable/finaloutlaw1" />
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:text="NUKKAD NATAK"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:id="@+id/nukkadday"
+                android:textColor="#ffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:id="@+id/nukkadtime"
+                android:textColor="#ffff" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/nukkadvenue"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:textColor="#ffffff" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#c0c0c0" />
+
+    <TextView
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp"
+        android:text="gdsgsgsdf"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

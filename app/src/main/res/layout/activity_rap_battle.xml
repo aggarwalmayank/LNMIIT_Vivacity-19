@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:text="RAP BATTLE"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rapday"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:textColor="#ffff" />
+
+            <TextView
+                android:id="@+id/raptime"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:textColor="#ffff" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/rapvenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#ffffff" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#c0c0c0" />
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="100"
+        android:scrollbarSize="4dp"
+        android:scrollbarThumbVertical="@color/scroll">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="There shall be only one round"
+                    android:layout_marginBottom="5dp"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#ffffff"
+                    android:textStyle="italic" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Each contestant shall be allotted 2 to 3 minutes for their performance. Failing to keep within this limit shall result in deduction of points."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Performance can be in a language of choice of the participant."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The organizers hold the authority to disqualify competitors who are rude, abusive or deemed otherwise unsuitable. The organizers shall not be answerable for such an action."
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The judges shall have the unanimous and unquestionable say and their decision shall be final"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Judgement shall be based on the lyrics, presence of the performer, delivery and audience appeal."
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="This event is a subject to number of participations. If ample numbers of participation is not there, it may be cancelled by the coordinators."
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/details"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="30sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:onClick="contact1"
+                    android:text="Mayank Aggarwal\n+91-9460560912"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:onClick="contact2"
+                    android:text="Mayank Aggarwal\n+91-9460560912"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

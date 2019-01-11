@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/events"
+        android:title="@string/display_Events"
+        android:icon="@drawable/events"
+        android:iconTint="@color/black"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/funEvents"
+        android:title="@string/fun_events"
+        android:icon="@drawable/fun_event"
+        android:iconTint="@color/black"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/pronite"
+        android:title="@string/display_Pronites"
+        android:icon="@drawable/pronite"
+        app:showAsAction="ifRoom"/>
+
+        <item android:id="@+id/bus"
+            android:title="@string/bus"
+            android:icon="@drawable/ic_bus"
+            app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/onGoing"
+        android:title="@string/ongoing"
+        android:icon="@drawable/ic_ongoing"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/map"
+        android:title="@string/display_Map"
+        android:icon="@drawable/mapdrawer"
+        app:showAsAction="ifRoom"/>
+
+    </group>
+
+    <item android:title="@string/others">
+
+        <menu>
+
+            <item android:title="@string/display_team"
+                android:icon="@drawable/team"
+                android:id="@+id/team"
+                app:showAsAction="ifRoom"/>
+            <item android:title="@string/sponsors"
+                android:icon="@drawable/sponsors"
+                android:id="@+id/sponsor"
+                app:showAsAction="ifRoom"/>
+            <item android:title="@string/display_ContactUs"
+                android:icon="@drawable/contact"
+                android:id="@+id/contact"
+                app:showAsAction="ifRoom"/>
+            <item android:title="@string/developer"
+                android:icon="@drawable/developer"
+                android:id="@+id/developer"
+                app:showAsAction="ifRoom"/>
+
+        </menu>
+    </item>
+</menu>

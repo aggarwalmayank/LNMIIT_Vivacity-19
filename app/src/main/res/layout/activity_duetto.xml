@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="DUETTO"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="(Hindi Duet)"
+        android:textColor="#ffffff"
+        android:textSize="15dp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/duettoday"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:textColor="#ffff" />
+
+            <TextView
+                android:id="@+id/duettotime"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:textColor="#ffff" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/duettovenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#c0c0c0" />
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="100"
+        android:scrollbarSize="4dp"
+        android:scrollbarThumbVertical="@color/scroll">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Registration is Mandatory"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="The contest shall comprise of two rounds:"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#ffffff"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="For the preliminary round:"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The partners in the duet should belong to the same college."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The participants may perform a song of their choice. The time allotted to each duet is 2-3 minutes"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Accompaniments or backing tracks are not allowed for this round."
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Each participant can exclusively participate in ONE duet."
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The number of duets qualifying for the final round shall be decided by the organizers on the basis of participation."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="For the final round:"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The participants can perform any song of their choice. The time allotted is 5-6 minutes. Failing to keep within the time limit shall result in deduction of points. "
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The participants are allowed a maximum of 2 accompaniments."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Backing tracks/karaoke are permitted."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="The judges shall have the unanimous and unquestionable say and their decision shall be final. The judges shall base their decision on the following criterions: quality of voice, sense of scale and beat and the quality of rendition."
+                    android:textColor="#ffffff"
+                    android:textSize="17sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/details"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="30sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:onClick="contact1"
+                    android:text="Mayank Aggarwal\n+91-9460560912"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:onClick="contact2"
+                    android:text="Mayank Aggarwal\n+91-9460560912"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

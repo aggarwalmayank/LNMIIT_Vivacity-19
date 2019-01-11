@@ -1,0 +1,73 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#000000</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+
+    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+        <item name="colorAccent">#000000</item>
+    </style>
+
+    <style name="Tags">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+    <style name="Events">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="EventImages">
+
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+    </style>
+
+    <style name="EventLayout">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">40dp</item>
+    </style>
+
+    <style name="CategoryTab" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@android:color/white</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
+        <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
+    </style>
+
+    <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+
+
+</resources>

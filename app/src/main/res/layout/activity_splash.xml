@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:text="SPLASH"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/splashday"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:textColor="#ffff" />
+
+            <TextView
+                android:id="@+id/splashtime"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:textColor="#ffff" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/splashvenue"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:textColor="#ffffff" />
+
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#c0c0c0" />
+
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="100"
+        android:scrollbarSize="4dp"
+        android:scrollbarThumbVertical="@color/scroll">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <blink
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duration="500">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:layout_marginTop="25dp"
+                        android:text="RULES :-"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+                </blink>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Registration is mandatory."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="It is a team event. Team size is limited to 2-3 members."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Theme will be provided to the teams in the beginning of the event."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="This is a face/hand painting event."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="One member of the team has to volunteer to get his/her face and hands painted by the rest of the team."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Teams will have to draw something related to the theme given."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The participants will also have to give a written explanation abou the art work in around 50 words."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The judging will be based on beauty, skill, clarity of explanation and relevance to the theme."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The decision of the judges and the organising committee will be final."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="All inventories will be provided."
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/details"
+                android:layout_marginTop="30sp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:onClick="contact1"
+                    android:text="Mayank Aggarwal\n+91-9460560912"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:onClick="contact2"
+                    android:text="Mayank Aggarwal\n+91-9460560912"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

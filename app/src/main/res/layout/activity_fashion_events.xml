@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="100"
+        android:scrollbarSize="4dp"
+        android:scrollbarThumbVertical="@color/scroll"
+        tools:context=".FashionEvents">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/vogue"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onclick"
+                android:src="@drawable/finalvouge1" />
+
+            <ImageButton
+                android:id="@+id/campus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rangshala"
+                android:layout_alignParentRight="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalcampus1" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:text="ANTAKSHARI"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/antakshariday"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:textColor="#ffff" />
+
+            <TextView
+                android:id="@+id/antaksharitime"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:textColor="#ffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/antaksharivenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:textColor="#ffffff" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#c0c0c0" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="The registration for the contest shall take place on the spot at the venue."
+        android:textColor="#ffffff"
+        android:textStyle="italic"
+        android:textAppearance="?android:textAppearanceMedium"/>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="100"
+        android:scrollbarSize="4dp"
+        android:scrollbarThumbVertical="@color/scroll">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <blink
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duration="500">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:layout_marginTop="25dp"
+                        android:text="RULES :-"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+                </blink>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="There shall be multiple rounds. The nature such rounds shall be decided by the organizers."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Each team shall comprise of 3 to 6 members."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The scoring system each round shall be intimated to the participants during the contest"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The winners shall be decided on the basis of the points earned through the rounds."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The decision of judges and coordinators are final and biding in all cases."
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/details"
+                android:layout_marginTop="30sp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:onClick="contact1"
+                    android:text="Mayank Aggarwal\n+91-9460560912"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:onClick="contact2"
+                    android:text="Mayank Aggarwal\n+91-9460560912"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

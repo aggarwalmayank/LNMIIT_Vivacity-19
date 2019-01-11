@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="THE OUTLAW"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="5dp"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/outlawday"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:textColor="#ffff" />
+
+            <TextView
+                android:id="@+id/outlawtime"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:textColor="#ffff" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/outlawvenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:textColor="#ffffff" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#c0c0c0" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="5"
+        android:scrollbarSize="4dp"
+        android:scrollbarThumbVertical="@color/scroll">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Round 1 will be there only when the no. of participating teams are greater than 4."
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#ffffff"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Round 1 (Showcase Round) :-"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Team should showcase their prepared performance with time limit 4-6 minutes"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Team Size - Min 5 and max 15 members are allowed"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Allowed dance styles - hip-hop, freestyle, break-dance, popping, locking, B-boying, tutting, waving, threading and other funky dance styles."
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Teams should bring their soundtrack either in a CD or a pen drive. The soundtrack should be in .mp3 format only."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Round 2 (Battle Round) :-"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="It will be a dance face off between 2 teams at a time."
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The timer for a team starts as soon as the dancers (solo, duo or group) step into the performance area and will be switched after 45 seconds."
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The music for the performance will be provided on the spot."
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="This round will run for max 9 minutes"
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Participants must not physically interfere with their opponents performance in the battle. Doing so will result in negative points or straight away disqualification"
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="One team will be selected after each battle. So, the team which will perform better in the last battle will be the winner."
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The decision of the judges shall be final and binding."
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/details"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="30sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:onClick="contact1"
+                    android:text="Mayank Aggarwal\n+91-9460560912"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:onClick="contact2"
+                    android:text="Mayank Aggarwal\n+91-9460560912"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

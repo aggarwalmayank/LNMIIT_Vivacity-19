@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.appsaga.vivacity2k18"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.android.support:design:23.3.0'
+    implementation files('libs/Android Libraries/CircleImageView-master/gradle/wrapper/gradle-wrapper.jar')
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.mxn.soul:flowingdrawer-core:2.0.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.github.Hitomis:CircleMenu:v1.1.0'
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+    implementation 'com.google.firebase:firebase-firestore:17.1.5'
+    implementation 'com.firebaseui:firebase-ui-firestore:4.1.0'
+    implementation 'android.arch.core:runtime:1.1.1'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.ramotion.foldingcell:folding-cell:1.2.2'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.10'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+}

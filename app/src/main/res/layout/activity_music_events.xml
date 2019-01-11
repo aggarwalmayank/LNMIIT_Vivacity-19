@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="100"
+        android:scrollbarSize="4dp"
+        android:scrollbarThumbVertical="@color/scroll"
+        tools:context=".DanceEvents">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageButton
+                android:id="@+id/solendious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalsolendiojus1" />
+
+            <ImageButton
+                android:id="@+id/mescolanza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/solendious"
+                android:layout_alignParentRight="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalgroup1" />
+
+            <ImageButton
+                android:id="@+id/verismo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mescolanza"
+                android:layout_alignParentLeft="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalinstrument1" />
+
+            <ImageButton
+                android:id="@+id/swaranjali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/verismo"
+                android:layout_alignParentRight="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalsolo1" />
+
+
+            <ImageButton
+                android:id="@+id/duetsong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/swaranjali"
+                android:layout_alignParentLeft="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalduet1" />
+            <ImageButton
+                android:id="@+id/antakshari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/duetsong"
+                android:layout_alignParentRight="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalantakshari1" />
+            <ImageButton
+                android:id="@+id/rap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/antakshari"
+                android:layout_alignParentLeft="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalrap1" />
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

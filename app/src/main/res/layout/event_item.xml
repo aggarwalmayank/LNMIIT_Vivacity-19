@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/eventname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EVENT NAME"
+            android:layout_toStartOf="@id/time"
+            android:layout_alignParentStart="true"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_toLeftOf="@id/time"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="event parent"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textStyle="bold|italic"
+            android:id="@+id/eventparent"
+            android:layout_below="@id/eventname"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="time"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:id="@+id/venue"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="venue"
+            android:layout_below="@id/time"
+            android:layout_alignParentEnd="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/day"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="day"
+            android:layout_below="@id/venue"
+            android:layout_alignParentEnd="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

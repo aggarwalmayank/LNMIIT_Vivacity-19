@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="100"
+        android:scrollbarSize="4dp"
+        android:scrollbarThumbVertical="@color/scroll"
+        tools:context=".DanceEvents">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageButton
+                android:id="@+id/splash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalface1" />
+
+            <ImageButton
+                android:id="@+id/tattoo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/splash"
+                android:layout_alignParentRight="true"
+                android:onClick="onclick"
+                android:src="@drawable/finaltattoo1" />
+
+            <ImageButton
+                android:id="@+id/contrasto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tattoo"
+                android:layout_alignParentLeft="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalcontrasto1" />
+
+            <ImageButton
+                android:id="@+id/colorama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contrasto"
+                android:layout_alignParentRight="true"
+                android:onClick="onclick"
+                android:src="@drawable/finalrangeela1" />
+
+
+            <ImageButton
+                android:id="@+id/tshirt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/colorama"
+                android:layout_alignParentLeft="true"
+                android:onClick="onclick"
+                android:src="@drawable/finaltshirt1" />
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

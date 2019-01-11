@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000000"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/event_image"
+        android:src="@drawable/ateet"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+        android:id="@+id/event_name"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16sp"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/event_image"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentLeft="true"
+        android:text="ART 'N' CRAFT"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:fontFamily="@font/nota_sans"
+        android:textColor="#ffffff"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

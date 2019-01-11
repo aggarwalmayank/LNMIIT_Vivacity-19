@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_main"
+    android:layout_width="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Developer">
+
+    <LinearLayout
+        android:id="@+id/mayank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/shape"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/mayank" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nota_sans"
+            android:text="Mayank Aggarwal"
+            android:textColor="#000000"
+            android:textSize="25dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nota_sans"
+            android:text="99mayankagg@gmail.com"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/nota_sans"
+            android:text="+91-9460560912"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_below="@+id/mayank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/shape"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ayush" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nota_sans"
+            android:text="Ayush Gupta"
+            android:textColor="#000000"
+            android:textSize="25dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nota_sans"
+            android:text="ayush.ag.ag.ag@gmail.com"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nota_sans"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:text="+91-9460323513"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+</ScrollView>
