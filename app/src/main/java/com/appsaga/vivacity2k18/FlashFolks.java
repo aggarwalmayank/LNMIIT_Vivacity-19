@@ -24,12 +24,12 @@ import javax.annotation.Nullable;
 public class FlashFolks extends AppCompatActivity {
 
     public static final String KEY_TIME="Time";
-    public static final String KEY_VENUE="Venue";
-    public static final String KEY_DAY="Day";
+   // public static final String KEY_VENUE="Venue";
+   // public static final String KEY_DAY="Day";
 
     private TextView timeView;
-    private TextView venueView;
-    private TextView dayView;
+   // private TextView venueView;
+    //private TextView dayView;
 
     private FirebaseFirestore db=FirebaseFirestore.getInstance();
     private DocumentReference dbref=db.collection("Events").document("Flash Folks");
@@ -38,11 +38,21 @@ public class FlashFolks extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flash_folks);
         ActionBar actionbar=getSupportActionBar();
-        actionbar.setTitle("FlashFolks");
+        actionbar.setTitle("Photography");
 
         timeView=findViewById(R.id.flashfolkstime);
-        venueView=findViewById(R.id.flashfolksvenue);
-        dayView=findViewById(R.id.flashfolksday);
+      //  venueView=findViewById(R.id.flashfolksvenue);
+       // dayView=findViewById(R.id.flashfolksday);
+        TextView reg=(TextView)findViewById(R.id.regflashfolks);
+        reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://www.vivacity.lnmiit.ac.in/forms/regphoto.html";
+                Intent website = new Intent(Intent.ACTION_VIEW);
+                website.setData(Uri.parse(url));
+                startActivity(website);
+            }
+        });
 
 
         dbref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -50,12 +60,12 @@ public class FlashFolks extends AppCompatActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if(documentSnapshot.exists()){
                     String time=documentSnapshot.getString(KEY_TIME);
-                    String day=documentSnapshot.getString(KEY_DAY);
-                    String venue=documentSnapshot.getString(KEY_VENUE);
+         //           String day=documentSnapshot.getString(KEY_DAY);
+           //         String venue=documentSnapshot.getString(KEY_VENUE);
 
-                    venueView.setText("Venue: "+venue);
-                    dayView.setText("Day "+day);
-                    timeView.setText("Time: "+time);
+             //       venueView.setText("Venue: "+venue);
+               //     dayView.setText("Day "+day);
+                    timeView.setText("ONLINE EVENT");
                 }
                 else{
                     Toast.makeText(FlashFolks.this, "doesn't exist", Toast.LENGTH_SHORT).show();
@@ -79,26 +89,15 @@ public class FlashFolks extends AppCompatActivity {
                 }
                 if(documentSnapshot.exists()){
                     String time=documentSnapshot.getString(KEY_TIME);
-                    String day=documentSnapshot.getString(KEY_DAY);
-                    String venue=documentSnapshot.getString(KEY_VENUE);
+                    //String day=documentSnapshot.getString(KEY_DAY);
+                    //String venue=documentSnapshot.getString(KEY_VENUE);
 
-                    venueView.setText("Venue: "+venue);
-                    dayView.setText("Day "+day);
-                    timeView.setText("Time: "+time);
+                    //venueView.setText("Venue: "+venue);
+                    //dayView.setText("Day "+day);
+                    timeView.setText("ONLINE EVENT");
                 }
             }
         });
 
-    }
-    public void contact1(View v){
-        String phone = "+917006638382";
-        Intent prabhat = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-        startActivity(prabhat);
-    }
-
-    public void contact2(View v){
-        String phone = "+917006638382";
-        Intent prabhat = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-        startActivity(prabhat);
     }
 }

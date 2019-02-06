@@ -9,8 +9,7 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
-
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
 
     <application
         android:name="android.support.multidex.MultiDexApplication"
@@ -49,7 +48,7 @@
             android:theme="@style/MyTheme" />
         <activity
             android:name=".First"
-            android:label="VIVACITY\&apos;19"
+            android:label="Vivacity\&apos;19"
             android:theme="@style/MyTheme"
             android:uiOptions="splitActionBarWhenNarrow" />
 
@@ -61,12 +60,8 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"
-            android:parentActivityName=".First" />
-        <activity
             android:name=".Team"
-            android:label="@string/display_team"
+            android:label="Core Team"
             android:theme="@style/MyTheme" />
         <activity
             android:name=".Pronites"
@@ -83,106 +78,106 @@
             android:theme="@style/MyTheme" />
         <activity
             android:name=".ArtEvents"
-            android:label="ART &apos;N&apos; CRAFT"
+            android:label="Art &apos;N&apos; Craft"
             android:parentActivityName=".Events" />
         <activity
             android:name=".DanceEvents"
-            android:label="DANCE"
+            android:label="Dance"
             android:parentActivityName=".Events" />
         <activity
             android:name=".DramaEvents"
-            android:label="DRAMATICS"
+            android:label="Dramatics"
             android:parentActivityName=".Events" />
         <activity
             android:name=".MusicEvents"
-            android:label="MUSIC"
+            android:label="Music"
             android:parentActivityName=".Events" />
         <activity
             android:name=".Antakshari"
-            android:label="MUSIC"
+            android:label="Music"
             android:parentActivityName=".MusicEvents" />
         <activity
             android:name=".Colorama"
-            android:label="ART &apos;N&apos; CRAFT"
+            android:label="Art &apos;N&apos; Craft"
             android:parentActivityName=".ArtEvents" />
         <activity
             android:name=".Contrasto"
-            android:label="ART &apos;N&apos; CRAFT"
+            android:label="Art &apos;N&apos; Craft"
             android:parentActivityName=".ArtEvents" />
         <activity
             android:name=".Duetto"
-            android:label="MUSIC"
+            android:label="Music"
             android:parentActivityName=".MusicEvents" />
         <activity
             android:name=".FlashFolks"
-            android:label="PHOTOGRAPHY"
+            android:label="Photography"
             android:parentActivityName=".Events" />
         <activity
             android:name=".Ifp"
-            android:label="FILM MAKING"
+            android:label="Film Making"
             android:parentActivityName=".Events" />
         <activity
             android:name=".Inkthetee"
-            android:label="ART &apos;N&apos; CRAFT"
+            android:label="Art &apos;N&apos; Craft"
             android:parentActivityName=".ArtEvents" />
         <activity
             android:name=".Mescolanza"
-            android:label="MUSIC"
+            android:label="Music"
             android:parentActivityName=".MusicEvents" />
         <activity
             android:name=".Mudra"
-            android:label="DANCE"
+            android:label="Dance"
             android:parentActivityName=".DanceEvents" />
         <activity
             android:name=".MukhAbhinaya"
-            android:label="DRAMATICS"
+            android:label="Dramatics"
             android:parentActivityName=".DramaEvents" />
         <activity
             android:name=".NukkadNatak"
-            android:label="NUKKAD NATAK" />
+            android:label="Nukkad Naatak" />
         <activity
             android:name=".PumpItUp"
-            android:label="DANCE"
+            android:label="Dance"
             android:parentActivityName=".DanceEvents" />
         <activity
             android:name=".RangManch"
-            android:label="DRAMATICS"
+            android:label="Dramatics"
             android:parentActivityName=".DramaEvents" />
         <activity
             android:name=".RapBattle"
-            android:label="MUSIC"
+            android:label="Music"
             android:parentActivityName=".MusicEvents" />
         <activity
             android:name=".Razzmatazz"
-            android:label="DANCE"
+            android:label="Dance"
             android:parentActivityName=".DanceEvents" />
         <activity
             android:name=".Solendious"
-            android:label="MUSIC"
+            android:label="Music"
             android:parentActivityName=".MusicEvents" />
         <activity
             android:name=".Splash"
-            android:label="ART &apos;N&apos; CRAFT"
+            android:label="Art &apos;N&apos; Craft"
             android:parentActivityName=".ArtEvents" />
         <activity
             android:name=".Swaranjali"
-            android:label="MUSIC"
+            android:label="Music"
             android:parentActivityName=".MusicEvents" />
         <activity
             android:name=".Tangle"
-            android:label="DANCE"
+            android:label="Dance"
             android:parentActivityName=".DanceEvents" />
         <activity
             android:name=".Tattoo"
-            android:label="ART &apos;N&apos; CRAFT"
+            android:label="Art &apos;N&apos; Craft"
             android:parentActivityName=".ArtEvents" />
         <activity
             android:name=".TheOutlaw"
-            android:label="DANCE"
+            android:label="Dance"
             android:parentActivityName=".DanceEvents" />
         <activity
             android:name=".Verismo"
-            android:label="MUSIC"
+            android:label="Music"
             android:parentActivityName=".MusicEvents" />
         <activity
             android:name=".OnGoing"
@@ -193,10 +188,63 @@
             android:parentActivityName=".First" />
         <activity
             android:name=".FashionEvents"
-            android:label="LIFE &apos;N&apos; STYLE"
+            android:label="Life &apos;N&apos; Style"
+            android:parentActivityName=".Events" />
+        <activity
+            android:name=".Vogue"
+            android:label="Life &apos;N&apos; Style"
             android:parentActivityName=".FashionEvents" />
-        <activity android:name=".Vogue" />
-        <activity android:name=".CampusPrincess"></activity>
+        <activity
+            android:name=".CampusPrincess"
+            android:label="Life &apos;N&apos; Style"
+            android:parentActivityName=".FashionEvents" />
+        <activity
+            android:name=".MrMrsVivacity"
+            android:label="Life &apos;N&apos; Style"
+            android:parentActivityName=".FashionEvents" />
+        <activity
+            android:name=".openmic"
+            android:label="Open Mic"
+            android:parentActivityName=".Events" />
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".SahyogEvents"
+            android:label="Sahyog"
+            android:parentActivityName=".Events" />
+        <activity
+            android:name=".RRR"
+            android:label="Sahyog"
+            android:parentActivityName=".SahyogEvents" />
+        <activity
+            android:name=".Social"
+            android:label="Sahyog"
+            android:parentActivityName=".SahyogEvents" />
+        <activity
+            android:name=".AllTeam"
+            android:label="Team"
+            android:parentActivityName=".Team"
+            android:theme="@style/MyTheme"/>
+        <activity
+            android:name=".OurTeam"
+            android:label="Our Team"
+            android:parentActivityName=".Team"
+            android:theme="@style/MyTheme"/>
+        <activity
+            android:name=".Ipl"
+            android:label="IPL Auction 3.0"
+            android:parentActivityName=".Events" />
+        <activity
+            android:name=".Quiz"
+            android:label="Quiz"
+            android:parentActivityName=".Events" />
+        <activity android:name=".PhotographyEvents"
+            android:label="Photography"
+            android:parentActivityName=".Events"/>
+        <activity android:name=".PhotoWorkshop"
+            android:label="Photography"
+            android:parentActivityName=".PhotographyEvents"/>
     </application>
 
 </manifest>

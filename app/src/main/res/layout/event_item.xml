@@ -38,7 +38,8 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textStyle="bold|italic"
             android:id="@+id/eventparent"
-            android:layout_below="@id/eventname"/>
+            android:layout_below="@id/eventname"
+            android:layout_alignParentLeft="true" />
 
         <TextView
             android:id="@+id/time"

@@ -14,10 +14,20 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
+
+import javax.annotation.Nullable;
 
 public class FunEvents extends AppCompatActivity {
 
@@ -25,23 +35,49 @@ public class FunEvents extends AppCompatActivity {
     //private ActionBarDrawerToggle actionBarDrawerToggle;
     FlowingDrawer mDrawer;
 
+    public static final String KEY_TIME="Time";
+    public static final String KEY_VENUE="Venue";
+    public static final String KEY_DAY="Day";
+
+    private TextView timeView;
+    private TextView venueView;
+    private TextView dayView;
+
+    private FirebaseFirestore db=FirebaseFirestore.getInstance();
+    private DocumentReference dbref=db.collection("Events").document("Dologue");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fun_events);
 
-        ViewPager viewPager = findViewById(R.id.viewpager);
-
-        CategoryAdapter adapter = new CategoryAdapter(this, getSupportFragmentManager());
-
-        viewPager.setAdapter(adapter);
-
-        TabLayout tabLayout = findViewById(R.id.tabs);
-
-        tabLayout.setupWithViewPager(viewPager);
-
         setupToolbar();
         setupMenu();
+
+        timeView=findViewById(R.id.dtime);
+        venueView=findViewById(R.id.dvenue);
+        dayView=findViewById(R.id.dday);
+        dbref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if(documentSnapshot.exists()){
+                    String time=documentSnapshot.getString(KEY_TIME);
+                    String day=documentSnapshot.getString(KEY_DAY);
+                    String venue=documentSnapshot.getString(KEY_VENUE);
+
+                    venueView.setText("Venue: "+venue);
+                    dayView.setText("Day "+day);
+                    timeView.setText("Time: "+time);
+                }
+                else{
+                    Toast.makeText(FunEvents.this, "doesn't exist", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(FunEvents.this, "Please Enable Mobile Data", Toast.LENGTH_SHORT).show();
+            }
+        });
 
       /*  drawerLayout=findViewById(R.id.drawer3);
         actionBarDrawerToggle=new ActionBarDrawerToggle(Events.this,drawerLayout,R.string.open,R.string.close);
@@ -226,5 +262,27 @@ public class FunEvents extends AppCompatActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+    }
+    protected void onStart() {
+        super.onStart();
+        dbref.addSnapshotListener(this,new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                if(e!=null){
+                    Toast.makeText(FunEvents.this, "error while loading", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(documentSnapshot.exists()){
+                    String time=documentSnapshot.getString(KEY_TIME);
+                    String day=documentSnapshot.getString(KEY_DAY);
+                    String venue=documentSnapshot.getString(KEY_VENUE);
+
+                    venueView.setText("Venue: "+venue);
+                    dayView.setText("Day "+day);
+                    timeView.setText("Time: "+time);
+                }
+            }
+        });
+
     }
 }

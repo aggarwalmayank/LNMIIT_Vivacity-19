@@ -36,10 +36,17 @@
                 android:id="@+id/campus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/rangshala"
+                android:layout_marginBottom="20dp"
                 android:layout_alignParentRight="true"
                 android:onClick="onclick"
                 android:src="@drawable/finalcampus1" />
+            <ImageButton
+                android:id="@+id/mrmrsviva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="onclick"
+                android:src="@drawable/mrmrsviva" />
 
         </LinearLayout>
     </ScrollView>

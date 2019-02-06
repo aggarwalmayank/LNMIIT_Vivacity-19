@@ -38,11 +38,20 @@ public class RangManch extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rang_manch);
         ActionBar actionbar=getSupportActionBar();
-        actionbar.setTitle("Rangmanch");
 
         timeView=findViewById(R.id.rangmanchtime);
         venueView=findViewById(R.id.rangmanchvenue);
         dayView=findViewById(R.id.rangmanchday);
+        TextView reg=(TextView)findViewById(R.id.regflashfolks);
+        reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://www.vivacity.lnmiit.ac.in/forms/regdrama.html";
+                Intent website = new Intent(Intent.ACTION_VIEW);
+                website.setData(Uri.parse(url));
+                startActivity(website);
+            }
+        });
 
 
         dbref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -89,16 +98,5 @@ public class RangManch extends AppCompatActivity {
             }
         });
 
-    }
-    public void contact1(View v){
-        String phone = "+917006638382";
-        Intent prabhat = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-        startActivity(prabhat);
-    }
-
-    public void contact2(View v){
-        String phone = "+917006638382";
-        Intent prabhat = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-        startActivity(prabhat);
     }
 }

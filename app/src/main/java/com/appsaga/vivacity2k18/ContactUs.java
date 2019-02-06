@@ -188,7 +188,7 @@ public class ContactUs extends AppCompatActivity {
     }
 
     public void openweb(View view) {
-        String url = "https://www.vivacity.lnmiit.ac.in";
+        String url = "www.vivacity.lnmiit.ac.in";
         Intent website = new Intent(Intent.ACTION_VIEW);
         website.setData(Uri.parse(url));
         startActivity(website);

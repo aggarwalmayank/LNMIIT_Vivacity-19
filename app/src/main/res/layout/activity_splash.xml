@@ -53,14 +53,37 @@
         </LinearLayout>
 
 
-
-        <TextView
-            android:id="@+id/splashvenue"
-            android:layout_alignParentRight="true"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:textColor="#ffffff" />
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/splashvenue"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:textColor="#ffffff" />
+            <blink
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duration="500">
+
+                <TextView
+                    android:id="@+id/regflashfolks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="16dp"
+                    android:text="REGISTER"
+                    android:textColor="#ffffff" />
+            </blink>
+
+        </LinearLayout>
+
 
 
 
@@ -98,10 +121,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <blink
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:duration="500">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -111,7 +130,7 @@
                         android:text="RULES :-"
                         android:textColor="#ffffff"
                         android:textSize="20sp" />
-                </blink>
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -194,32 +213,6 @@
                     android:textColor="#ffffff" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/details"
-                android:layout_marginTop="30sp"
-                android:layout_alignParentBottom="true"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="start"
-                    android:onClick="contact1"
-                    android:text="Mayank Aggarwal\n+91-9460560912"
-                    android:textColor="#ffffff" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="end"
-                    android:onClick="contact2"
-                    android:text="Mayank Aggarwal\n+91-9460560912"
-                    android:textColor="#ffffff" />
-            </LinearLayout>
         </RelativeLayout>
 
 

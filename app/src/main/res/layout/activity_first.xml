@@ -19,8 +19,6 @@
         android:background="@drawable/back_main"
         android:orientation="vertical">
 
-
-
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
@@ -29,6 +27,7 @@
             <include
                 android:id="@+id/toolbar"
                 layout="@layout/view_feed_toolbar"/>
+
         </android.support.design.widget.AppBarLayout>
 
         <!--content-->
@@ -61,6 +60,41 @@
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="200dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_height="35dp"
+                        android:onClick="insta"
+                        android:src="@drawable/instagram"
+                        android:layout_marginBottom="5dp" />
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_height="35dp"
+                        android:onClick="yt"
+                        android:src="@drawable/youtube"
+                        android:layout_marginBottom="5dp"/>
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:onClick="fb"
+                        android:src="@drawable/facebook"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp"/>
+
+
+                </LinearLayout>
+
             </RelativeLayout>
         </android.support.design.widget.CoordinatorLayout>
     </android.support.design.widget.CoordinatorLayout>

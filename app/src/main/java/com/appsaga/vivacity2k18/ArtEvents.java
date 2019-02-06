@@ -3,6 +3,7 @@ package com.appsaga.vivacity2k18;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,7 +14,7 @@ import android.widget.ImageButton;
 
 public class ArtEvents extends AppCompatActivity {
     Animation animation;
-    int DELAY = 1000;
+    int DELAY = 500;
     Handler handler;
 
     @Override
@@ -27,7 +28,7 @@ public class ArtEvents extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.splash:
 
-                animation = AnimationUtils.loadAnimation(this, R.anim.lft_to_ryt);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.splash)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -40,7 +41,7 @@ public class ArtEvents extends AppCompatActivity {
 
                 break;
             case R.id.tattoo:
-                animation = AnimationUtils.loadAnimation(this, R.anim.ryt_to_lft);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.tattoo)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -51,7 +52,7 @@ public class ArtEvents extends AppCompatActivity {
                 }, DELAY);
                 break;
             case R.id.contrasto:
-                animation = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.contrasto)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -63,7 +64,7 @@ public class ArtEvents extends AppCompatActivity {
 
                 break;
             case R.id.colorama:
-                animation = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.colorama)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -76,7 +77,7 @@ public class ArtEvents extends AppCompatActivity {
 
                 break;
             case R.id.tshirt:
-                animation = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.tshirt)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -89,6 +90,12 @@ public class ArtEvents extends AppCompatActivity {
 
                 break;
         }
+    }
+    public void open(View view){
+        String url = "www.vivacity.netlify.com/forms/regdance";
+        Intent website = new Intent(Intent.ACTION_VIEW);
+        website.setData(Uri.parse(url));
+        startActivity(website);
     }
 
 

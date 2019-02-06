@@ -38,11 +38,20 @@ public class RapBattle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rap_battle);
         ActionBar actionbar=getSupportActionBar();
-        actionbar.setTitle("RapBattle");
 
         timeView=findViewById(R.id.raptime);
         venueView=findViewById(R.id.rapvenue);
         dayView=findViewById(R.id.rapday);
+        TextView reg=(TextView)findViewById(R.id.regflashfolks);
+        reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://www.vivacity.lnmiit.ac.in/forms/regmusic.html";
+                Intent website = new Intent(Intent.ACTION_VIEW);
+                website.setData(Uri.parse(url));
+                startActivity(website);
+            }
+        });
 
 
         dbref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -89,16 +98,5 @@ public class RapBattle extends AppCompatActivity {
             }
         });
 
-    }
-    public void contact1(View v){
-        String phone = "+917006638382";
-        Intent prabhat = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-        startActivity(prabhat);
-    }
-
-    public void contact2(View v){
-        String phone = "+917006638382";
-        Intent prabhat = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-        startActivity(prabhat);
     }
 }

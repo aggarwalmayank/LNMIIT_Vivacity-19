@@ -53,7 +53,7 @@ public class Ongoing_Fragment extends Fragment {
         curdate=date.substring(0,2);
         if(curdate.equals("1"))
             curdate="1";
-        else if(curdate.equals("31"))
+        else if(curdate.equals("2"))
             curdate="2";
         else
             curdate="3";

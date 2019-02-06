@@ -12,10 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="16dp"
         android:text="MUKH ABHINAYA"
         android:textColor="#ffffff"
         android:textSize="25dp"
+        android:layout_marginBottom="5dp"
         android:textStyle="bold" />
 
     <View
@@ -34,34 +34,57 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/mukhabhinayaday"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_gravity="start"
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
-                android:id="@+id/mukhabhinayaday"
                 android:textColor="#ffff" />
 
             <TextView
+                android:id="@+id/mukhabhinayatime"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_gravity="start"
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
-                android:id="@+id/mukhabhinayatime"
                 android:textColor="#ffff" />
         </LinearLayout>
-
-
-        <TextView
-            android:id="@+id/mukhabhinayavenue"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:textColor="#ffffff" />
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/mukhabhinayavenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_alignParentRight="true"
+                android:textColor="#ffffff" />
 
 
+
+
+            <blink
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duration="500">
+
+                <TextView
+                    android:id="@+id/regflashfolks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="16dp"
+                    android:text="REGISTER"
+                    android:textColor="#ffffff" />
+            </blink>
+
+        </LinearLayout>
 
     </RelativeLayout>
 
@@ -71,11 +94,174 @@
         android:layout_marginTop="10dp"
         android:background="#c0c0c0" />
 
-    <TextView
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginTop="25dp"
-        android:text="gdsgsgsdf"
-        android:textColor="#ffffff" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="5"
+        android:scrollbarSize="4dp"
+        android:scrollbarThumbVertical="@color/scroll">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Registration is Mandatory"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Each team can have maximum of 10 members."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Time limit is 15 minutes (empty stage to empty stage) for each team."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Negative points will be awarded for exceeding the time limit."
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The act should not contain any dialogues or lip sync."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="No act shall contain any offensive, obscene, disrespectful actions or gestures. The act will be immediately stopped, and the entry will be disqualified, if these instructions are not followed."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Pre-recorded music is allowed and should be brought in standard secondary storage device. Pre Recorded music shouldn&#39;t contain any kind of narrations or voiceovers."
+                    android:textColor="#ffffff" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="All costumes are to be arranged by the participating team. The organizing committee is responsible only for the infrastructural facilities."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="All teams must submit a list of required props on rendition.lnmiit@gmail.com latest by January 25, 2019."
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text=" The decision of the judges will be Final and binding."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Performance could consist of multiple scenes and blackouts."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Judging Criteria:"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Acting"
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Usage of stage"
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="overall impact"
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Story"
+                    android:textColor="#ffffff" />
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
 
 </LinearLayout>

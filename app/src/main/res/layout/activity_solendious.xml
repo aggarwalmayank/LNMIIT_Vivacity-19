@@ -59,15 +59,39 @@
                 android:textColor="#ffff" />
         </LinearLayout>
 
-
-
-        <TextView
-            android:id="@+id/solendiousvenue"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:layout_alignParentRight="true"
-            android:textColor="#ffffff" />
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:id="@+id/solendiousvenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_alignParentRight="true"
+                android:textColor="#ffffff" />
+
+
+            <blink
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duration="500">
+
+                <TextView
+                    android:id="@+id/regflashfolks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="16dp"
+                    android:text="REGISTER"
+                    android:textColor="#ffffff" />
+            </blink>
+
+        </LinearLayout>
+
+
 
 
     </RelativeLayout>
@@ -210,32 +234,6 @@
                     android:textStyle="italic" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/details"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="30sp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="start"
-                    android:onClick="contact1"
-                    android:text="Mayank Aggarwal\n+91-9460560912"
-                    android:textColor="#ffffff" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="end"
-                    android:onClick="contact2"
-                    android:text="Mayank Aggarwal\n+91-9460560912"
-                    android:textColor="#ffffff" />
-            </LinearLayout>
         </RelativeLayout>
 
     </ScrollView>

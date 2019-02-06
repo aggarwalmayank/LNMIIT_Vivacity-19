@@ -38,11 +38,20 @@ public class Mudra extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mudra);
         ActionBar actionbar=getSupportActionBar();
-        actionbar.setTitle("Mudra");
 
         timeView=findViewById(R.id.mudratime);
         venueView=findViewById(R.id.mudravenue);
         dayView=findViewById(R.id.mudraday);
+        TextView reg=(TextView)findViewById(R.id.regflashfolks);
+        reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://www.vivacity.lnmiit.ac.in/forms/regdance.html";
+                Intent website = new Intent(Intent.ACTION_VIEW);
+                website.setData(Uri.parse(url));
+                startActivity(website);
+            }
+        });
 
 
         dbref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -89,16 +98,5 @@ public class Mudra extends AppCompatActivity {
             }
         });
 
-    }
-    public void contact1(View v){
-        String phone = "+917006638382";
-        Intent prabhat = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-        startActivity(prabhat);
-    }
-
-    public void contact2(View v){
-        String phone = "+917006638382";
-        Intent prabhat = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-        startActivity(prabhat);
     }
 }

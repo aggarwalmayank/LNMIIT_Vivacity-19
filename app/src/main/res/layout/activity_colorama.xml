@@ -51,14 +51,39 @@
                 android:id="@+id/coloramatime"
                 android:textColor="#ffff" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/coloramavenue"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="16dp"
-            android:textColor="#ffffff" />
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:id="@+id/coloramavenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:textColor="#ffffff" />
+
+
+
+            <blink
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duration="500">
+
+                <TextView
+                    android:id="@+id/regflashfolks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="16dp"
+                    android:text="REGISTER"
+                    android:textColor="#ffffff" />
+            </blink>
+
+        </LinearLayout>
+
     </RelativeLayout>
 
     <View
@@ -91,12 +116,10 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="0dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_alignParentLeft="true">
 
-                <blink
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:duration="500">
+
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -106,7 +129,7 @@
                         android:text="RULES :-"
                         android:textColor="#ffffff"
                         android:textSize="20sp" />
-                </blink>
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -180,30 +203,7 @@
                     android:text=" The decision of the judges and the organizing committee will be final."
                     android:textColor="#ffffff" />
             </LinearLayout>
-            <LinearLayout
-                android:layout_below="@id/details"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="30dp"
-                android:layout_alignParentBottom="true"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="start"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="contact1"
-                    android:textColor="#ffffff"
-                    android:text="Mayank Aggarwal\n+91-9460560912"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="end"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="contact2"
-                    android:textColor="#ffffff"
-                    android:text="Mayank Aggarwal\n+91-9460560912"/>
-            </LinearLayout>
+
         </RelativeLayout>
     </ScrollView>
 

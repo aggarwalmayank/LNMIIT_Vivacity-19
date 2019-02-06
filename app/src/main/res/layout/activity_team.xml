@@ -15,24 +15,25 @@
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/back_main"
+        android:background="#000000"
         android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="20dp">
+
             <ScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <com.ramotion.foldingcell.FoldingCell xmlns:android="http://schemas.android.com/apk/res/android"
@@ -53,12 +54,59 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/gsec" />
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/gesc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocshreyansh" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/gesc"
+                                    android:gravity="center_horizontal"
+                                    android:text="Shreyansh Jain\n(Gsec)\n+91-9410299132"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/agesc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocunnati" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/agesc"
+                                    android:gravity="center_horizontal"
+                                    android:text="Unnati Tibrewal\n(AGsec)\n+91-8290483298"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
 
                         </LinearLayout>
                         ​
@@ -73,8 +121,103 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:src="@drawable/gsec"
-                                android:layout_marginBottom="10dp"/>
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/gsec" />
+
+                        </LinearLayout>
+                        ​
+                    </com.ramotion.foldingcell.FoldingCell>
+
+
+                    <com.ramotion.foldingcell.FoldingCell xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/tc7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        folding-cell:backSideColor="#ffffff">
+                        ​
+
+                        <LinearLayout
+                            android:id="@+id/sponsor_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/sponsorship" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/nishant"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocnishant" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/nishant"
+                                    android:gravity="center_horizontal"
+                                    android:text="Nishant Mishra\n+91-9521868459"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/vikas"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocvikas" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/vikas"
+                                    android:gravity="center_horizontal"
+                                    android:text="Vikas Bansal\n+91-7728054890"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+
+
+
+                        </LinearLayout>
+                        ​
+
+                        <LinearLayout
+                            android:id="@+id/sponsor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/sponsorship" />
 
                         </LinearLayout>
                         ​
@@ -98,14 +241,61 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/mediamarket" />
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
 
-                        </LinearLayout>
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/ateettiwari"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocateet" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/ateettiwari"
+                                    android:gravity="center_horizontal"
+                                    android:text="Ateet Tiwari\n+91-9001757535"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/prabhat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocprabhat" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/prabhat"
+                                    android:gravity="center_horizontal"
+                                    android:text="Prabhat Sharma\n+91-7006638382"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+
+                                               </LinearLayout>
                         ​
 
                         <LinearLayout
@@ -118,23 +308,22 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:src="@drawable/pr"
-                                android:layout_marginBottom="10dp"/>
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/mediamarket" />
 
                         </LinearLayout>
                         ​
                     </com.ramotion.foldingcell.FoldingCell>
-
-
                     <com.ramotion.foldingcell.FoldingCell xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/tc3"
+                        android:id="@+id/tc6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         folding-cell:backSideColor="#ffffff">
+                        ​
 
                         <LinearLayout
-                            android:id="@+id/manager_content"
+                            android:id="@+id/creative_content"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
@@ -143,18 +332,64 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                                android:src="@drawable/creativehead" />
 
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/madhav"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocmadhav" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/madhav"
+                                    android:gravity="center_horizontal"
+                                    android:text="Madhav Khandelwal\n+91-9799276361"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/nikhil"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocnikhil" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/nikhil"
+                                    android:gravity="center_horizontal"
+                                    android:text="Nikhil"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
                         </LinearLayout>
                         ​
 
                         <LinearLayout
-                            android:id="@+id/manager"
+                            android:id="@+id/creative"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -163,8 +398,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:src="@drawable/eventmanager"
-                                android:layout_marginBottom="10dp"/>
+                                android:layout_marginBottom="10dp"
+
+                                android:src="@drawable/creativehead" />
 
                         </LinearLayout>
                         ​
@@ -188,12 +424,85 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/eventesteam" />
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/shaleen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocshaleen" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/shaleen"
+                                    android:gravity="center_horizontal"
+                                    android:text="Shaleen Khandelwal\n+91-9461067801"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/rohit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocrohit" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/rohit"
+                                    android:gravity="center_horizontal"
+                                    android:text="Rohit Singhal\n+91-7597687004"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/madan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocmadan" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/madan"
+                                    android:gravity="center_horizontal"
+                                    android:text="Ujjwal Madan\n+91-9999396723"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
 
                         </LinearLayout>
                         ​
@@ -208,12 +517,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:src="@drawable/eventesteam"
-                                android:layout_marginBottom="10dp"/>
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/eventesteam" />
 
                         </LinearLayout>
                         ​
                     </com.ramotion.foldingcell.FoldingCell>
+
+
 
                     <com.ramotion.foldingcell.FoldingCell xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
@@ -233,12 +544,35 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/finance" />
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/himanshu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ochimanshu" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/himanshu"
+                                    android:gravity="center_horizontal"
+                                    android:text="Himanshu Gupta\n+91-7597687004"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
 
                         </LinearLayout>
                         ​
@@ -247,15 +581,14 @@
                             android:id="@+id/finance"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            >
+                            android:orientation="vertical">
 
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:src="@drawable/finance"
-                                android:layout_marginBottom="10dp"/>
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/finance" />
 
                         </LinearLayout>
                         ​
@@ -263,14 +596,13 @@
 
                     <com.ramotion.foldingcell.FoldingCell xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/tc6"
+                        android:id="@+id/tc12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         folding-cell:backSideColor="#ffffff">
                         ​
 
                         <LinearLayout
-                            android:id="@+id/creative_content"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
@@ -279,18 +611,64 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/coverage" />
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/sarthak"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocsarthak" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/sarthak"
+                                    android:gravity="center_horizontal"
+                                    android:text="Sarthak Jain\n+91-9001383821"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/prakhar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocprakhar1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/prakhar"
+                                    android:gravity="center_horizontal"
+                                    android:text="Prakhar Paliwal\n+91-8107492242"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
 
                         </LinearLayout>
                         ​
 
                         <LinearLayout
-                            android:id="@+id/creative"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -299,24 +677,23 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:src="@drawable/creativehead"
-
-                                android:layout_marginBottom="10dp"/>
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/coverage" />
 
                         </LinearLayout>
                         ​
                     </com.ramotion.foldingcell.FoldingCell>
 
+
                     <com.ramotion.foldingcell.FoldingCell xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/tc7"
+                        android:id="@+id/tc15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         folding-cell:backSideColor="#ffffff">
                         ​
 
                         <LinearLayout
-                            android:id="@+id/sponsor_content"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
@@ -325,18 +702,64 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/funevent" />
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/awasti"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocawasti" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/awasti"
+                                    android:gravity="center_horizontal"
+                                    android:text="Siddarth Awasti"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/balda"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocbalda" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/balda"
+                                    android:gravity="center_horizontal"
+                                    android:text="Rohan Balda"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
 
                         </LinearLayout>
                         ​
 
                         <LinearLayout
-                            android:id="@+id/sponsor"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -345,98 +768,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:src="@drawable/sponsorship"
-                                android:layout_marginBottom="10dp"/>
-
-                        </LinearLayout>
-                        ​
-                    </com.ramotion.foldingcell.FoldingCell>
-
-                    <com.ramotion.foldingcell.FoldingCell xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/tc8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        folding-cell:backSideColor="#ffffff">
-                        ​
-
-                        <LinearLayout
-                            android:id="@+id/media_content"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:visibility="gone">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
-
-                        </LinearLayout>
-                        ​
-
-                        <LinearLayout
-                            android:id="@+id/media"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:src="@drawable/media"
-                                android:layout_marginBottom="10dp"/>
-
-                        </LinearLayout>
-                        ​
-                    </com.ramotion.foldingcell.FoldingCell>
-
-                    <com.ramotion.foldingcell.FoldingCell xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/tc9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        folding-cell:backSideColor="#ffffff">
-                        ​
-
-                        <LinearLayout
-                            android:id="@+id/ambasador_content"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:visibility="gone">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
-
-                        </LinearLayout>
-                        ​
-
-                        <LinearLayout
-                            android:id="@+id/ambassador"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:src="@drawable/campusambassdor"
-                                android:layout_marginBottom="10dp"/>
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/funevent" />
 
                         </LinearLayout>
                         ​
@@ -460,13 +793,84 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/wdevelop" />
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/razzmatazz" />
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
 
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/gupta"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/agupta" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/gupta"
+                                    android:gravity="center_horizontal"
+                                    android:text="Ashish Gupta\n+91-8619415819"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/totla"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/octotla" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/totla"
+                                    android:gravity="center_horizontal"
+                                    android:text="Ashish Totla\n+91-9784908242"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/mashu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ocmashu" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/mashu"
+                                    android:gravity="center_horizontal"
+                                    android:text="Mashu Ajmera\n+91-7073637246"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
                         </LinearLayout>
                         ​
 
@@ -480,16 +884,108 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:src="@drawable/development"
-                                android:layout_marginBottom="10dp"/>
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/wdevelop" />
 
                         </LinearLayout>
                         ​
                     </com.ramotion.foldingcell.FoldingCell>
 
+                    <com.ramotion.foldingcell.FoldingCell xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/tc11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        folding-cell:backSideColor="#ffffff">
+                        ​
+
+                        <LinearLayout
+                            android:id="@+id/adevep_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/adevelop" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/mayank"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/teammayank" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/mayank"
+                                    android:gravity="center_horizontal"
+                                    android:text="Mayank Aggarwal\n+91-9460560912"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/ayush"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/teamayush" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/ayush"
+                                    android:gravity="center_horizontal"
+                                    android:text="Ayush Gupta\n+91-9460323513"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                        ​
+
+                        <LinearLayout
+                            android:id="@+id/adevep"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/adevelop" />
+
+                        </LinearLayout>
+                        ​
+                    </com.ramotion.foldingcell.FoldingCell>
                 </LinearLayout>
             </ScrollView>
         </RelativeLayout>
+
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFormat(PixelFormat.UNKNOWN);
 
 
-        int DELAY = 2500;
+        int DELAY = 2000;
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {

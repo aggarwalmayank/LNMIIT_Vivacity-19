@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="16dp"
         android:text="CAMPUS PRINCESS"
+        android:layout_marginBottom="5dp"
         android:textColor="#ffffff"
         android:textSize="25dp"
         android:textStyle="bold" />
@@ -34,31 +34,56 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/campusday"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_gravity="start"
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
-                android:id="@+id/campusday"
                 android:textColor="#ffff" />
 
             <TextView
+                android:id="@+id/campustime"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_gravity="start"
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
-                android:id="@+id/campustime"
                 android:textColor="#ffff" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/campusvenue"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="16dp"
-            android:textColor="#ffffff" />
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:id="@+id/campusvenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_alignParentRight="true"
+                android:textColor="#ffffff" />
+
+
+
+            <blink
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duration="500">
+
+                <TextView
+                    android:id="@+id/regflashfolks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="16dp"
+                    android:text="REGISTER"
+                    android:textColor="#ffffff" />
+            </blink>
+
+        </LinearLayout>
+
     </RelativeLayout>
 
     <View
@@ -67,136 +92,142 @@
         android:layout_marginTop="10dp"
         android:background="#c0c0c0" />
 
-
-
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:fadeScrollbars="false"
         android:scrollbarAlwaysDrawVerticalTrack="true"
-        android:scrollbarFadeDuration="100"
+        android:scrollbarFadeDuration="5"
         android:scrollbarSize="4dp"
         android:scrollbarThumbVertical="@color/scroll">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginRight="10dp">
+
             <LinearLayout
                 android:id="@+id/details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <blink
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:duration="500">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:layout_marginTop="25dp"
-                        android:text="RULES :-"
-                        android:textSize="20sp"
-                        android:textColor="#ffffff" />
-                </blink>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/bullet"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Registration is mandatory."
+                    android:text="Registration is Mandatory"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Eligibility Criteria:"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#ffffff"
+                    android:textStyle="italic" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Nationality: Indian Passport Holder."
                     android:textColor="#ffffff" />
 
                 <TextView
-                    android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:drawableLeft="@drawable/bullet"
-                    android:text="It is a team event OR individual participation. Team size limit to 2-3 members"
+                    android:text="Age: Between 18-25 years."
                     android:textColor="#ffffff" />
 
                 <TextView
-                    android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:drawableLeft="@drawable/bullet"
-                    android:text="Theme will be provided to the teams at the beginning of the event."
+                    android:text="Marital Status: The applicant should be unmarried."
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Height: 5’ 5” and above (without heels)."
                     android:textColor="#ffffff" />
 
                 <TextView
-                    android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:drawableLeft="@drawable/bullet"
-                    android:text="Each participant will be provided with a drawing sheet- half of it being black and other half being white, along with other inventories."
+                    android:text="Student of any recognized educational institution"
                     android:textColor="#ffffff" />
 
                 <TextView
-                    android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:drawableLeft="@drawable/bullet"
-                    android:text="He/She will have to draw a something related to a certain theme using black and white charcoal/chalk provided to him/her."
+                    android:text="Selected participants will have to follow the dress code of a Black Cocktail Dress and Stilettos while walking the ramp"
+                    android:textColor="#ffffff" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Gratification:"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="The winners get direct entry to the final round of Miss Universe India 2018 auditions In Mumbai"
                     android:textColor="#ffffff" />
 
                 <TextView
-                    android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:drawableLeft="@drawable/bullet"
-                    android:text="The participant will also have to give a written explanation about the art work in around 50 words."
+                    android:text="They also get a chance to be a part of the Exclusive Miss India Organization Grooming School wherein they get trained by the best names from the fashion and glamour Industry."
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
+                    android:text="Miss India Organization merchandise to be entitled to the winners."
                     android:textColor="#ffffff" />
 
-                <TextView
-                    android:layout_marginBottom="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/bullet"
-                    android:text="The judging will be based on beauty, skill, clarity of explanation and relevance to the Theme."
-                    android:textColor="#ffffff" />
-
-                <TextView
-                    android:layout_marginBottom="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/bullet"
-                    android:text="The decision of the judges and the organizing committee will be final."
-                    android:textColor="#ffffff" />
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_below="@id/details"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="30dp"
-                android:layout_alignParentBottom="true"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="start"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="contact1"
-                    android:textColor="#ffffff"
-                    android:text="Mayank Aggarwal\n+91-9460560912"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="end"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="contact2"
-                    android:textColor="#ffffff"
-                    android:text="Mayank Aggarwal\n+91-9460560912"/>
-            </LinearLayout>
+
         </RelativeLayout>
 
     </ScrollView>
-
 
 
 </LinearLayout>

@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
+<!--
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
@@ -41,7 +41,7 @@
                 android:layout_weight="1"
                 android:id="@+id/ifpday"
                 android:textColor="#ffff" />
-
+-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
@@ -51,14 +51,38 @@
                 android:id="@+id/ifptime"
                 android:textColor="#ffff" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/ifpvenue"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:textColor="#ffffff" />
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+<!--
+            <TextView
+                android:id="@+id/ifpvenue"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:textColor="#ffffff" />
+-->
+
+
+            <blink
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duration="500">
+
+                <TextView
+                    android:id="@+id/regflashfolks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="16dp"
+                    android:text="REGISTER"
+                    android:textColor="#ffffff" />
+            </blink>
+
+        </LinearLayout>
 
     </RelativeLayout>
 
@@ -88,10 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <blink
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:duration="500">
+
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -101,7 +122,7 @@
                         android:text="RULES :-"
                         android:textSize="20sp"
                         android:textColor="#ffffff" />
-                </blink>
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -234,30 +255,29 @@
                     android:textColor="#ffffff" />
 
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_below="@id/details"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="30dp"
-                android:layout_alignParentBottom="true"
-                android:orientation="horizontal">
                 <TextView
-                    android:layout_width="0dp"
-                    android:gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_marginTop="25dp"
+                    android:text="For all the videographers out there india film project will also be organising a film making workshop on 1st february in lnmiit which is absolutely free for all. India film projects volunteers will be holding the workshop. Register for the workshop"
+                    android:textSize="14sp"
+                    android:textColor="#ffffff" />
+
+                <blink
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="contact1"
-                    android:textColor="#ffffff"
-                    android:text="Mayank Aggarwal\n+91-9460560912"/>
+                    android:duration="500">
                 <TextView
-                    android:layout_width="0dp"
-                    android:gravity="end"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="contact2"
-                    android:textColor="#ffffff"
-                    android:text="Mayank Aggarwal\n+91-9460560912"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:onClick="wshop"
+                    android:layout_marginTop="25dp"
+                    android:text="REGISTER FOR WORKSHOP"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff" /></blink>
+
             </LinearLayout>
         </RelativeLayout>
 

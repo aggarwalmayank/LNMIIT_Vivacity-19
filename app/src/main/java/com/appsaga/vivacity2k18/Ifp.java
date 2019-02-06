@@ -24,12 +24,12 @@ import javax.annotation.Nullable;
 public class Ifp extends AppCompatActivity {
 
     public static final String KEY_TIME="Time";
-    public static final String KEY_VENUE="Venue";
-    public static final String KEY_DAY="Day";
+  //  public static final String KEY_VENUE="Venue";
+    //public static final String KEY_DAY="Day";
 
     private TextView timeView;
-    private TextView venueView;
-    private TextView dayView;
+   // private TextView venueView;
+    //private TextView dayView;
 
     private FirebaseFirestore db=FirebaseFirestore.getInstance();
     private DocumentReference dbref=db.collection("Events").document("Indian Film Project");
@@ -38,11 +38,20 @@ public class Ifp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ifp);
         ActionBar actionbar=getSupportActionBar();
-        actionbar.setTitle("Ifp");
 
         timeView=findViewById(R.id.ifptime);
-        venueView=findViewById(R.id.ifpvenue);
-        dayView=findViewById(R.id.ifpday);
+      //  venueView=findViewById(R.id.ifpvenue);
+        //dayView=findViewById(R.id.ifpday);
+        TextView reg=(TextView)findViewById(R.id.regflashfolks);
+        reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://goo.gl/forms/kXkkm4ouihHHFRAy1";
+                Intent website = new Intent(Intent.ACTION_VIEW);
+                website.setData(Uri.parse(url));
+                startActivity(website);
+            }
+        });
 
 
         dbref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -50,12 +59,12 @@ public class Ifp extends AppCompatActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if(documentSnapshot.exists()){
                     String time=documentSnapshot.getString(KEY_TIME);
-                    String day=documentSnapshot.getString(KEY_DAY);
-                    String venue=documentSnapshot.getString(KEY_VENUE);
+                //    String day=documentSnapshot.getString(KEY_DAY);
+              //      String venue=documentSnapshot.getString(KEY_VENUE);
 
-                    venueView.setText("Venue: "+venue);
-                    dayView.setText("Day "+day);
-                    timeView.setText("Time: "+time);
+            //        venueView.setText("Venue: "+venue);
+          //          dayView.setText("Day "+day);
+                    timeView.setText("ONLINE EVENT");
                 }
                 else{
                     Toast.makeText(Ifp.this, "doesn't exist", Toast.LENGTH_SHORT).show();
@@ -79,26 +88,23 @@ public class Ifp extends AppCompatActivity {
                 }
                 if(documentSnapshot.exists()){
                     String time=documentSnapshot.getString(KEY_TIME);
-                    String day=documentSnapshot.getString(KEY_DAY);
-                    String venue=documentSnapshot.getString(KEY_VENUE);
+                    //String day=documentSnapshot.getString(KEY_DAY);
+                    //String venue=documentSnapshot.getString(KEY_VENUE);
 
-                    venueView.setText("Venue: "+venue);
-                    dayView.setText("Day "+day);
-                    timeView.setText("Time: "+time);
+                  //  venueView.setText("Venue: "+venue);
+                    //dayView.setText("Day "+day);
+                    timeView.setText("ONLINE EVENT");
                 }
             }
         });
 
     }
-    public void contact1(View v){
-        String phone = "+917006638382";
-        Intent prabhat = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-        startActivity(prabhat);
-    }
+    public void wshop(View v)
+    {
+        String url = "https://goo.gl/forms/OBBLhDYRE1gTMGab2";
+        Intent website = new Intent(Intent.ACTION_VIEW);
+        website.setData(Uri.parse(url));
+        startActivity(website);
 
-    public void contact2(View v){
-        String phone = "+917006638382";
-        Intent prabhat = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-        startActivity(prabhat);
     }
 }

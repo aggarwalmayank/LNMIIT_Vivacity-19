@@ -18,8 +18,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -153,8 +151,6 @@
                     </LinearLayout>
                 </RelativeLayout>
 
-
-
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
@@ -165,21 +161,6 @@
                 layout="@layout/view_feed_toolbar" />
         </android.support.design.widget.AppBarLayout>
 
-        <!--content-->
-        <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/content1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </RelativeLayout>
-        </android.support.design.widget.CoordinatorLayout>
     </android.support.design.widget.CoordinatorLayout>
 
 

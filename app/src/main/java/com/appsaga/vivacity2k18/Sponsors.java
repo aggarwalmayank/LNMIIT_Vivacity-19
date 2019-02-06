@@ -1,5 +1,9 @@
 package com.appsaga.vivacity2k18;
 
+import android.annotation.TargetApi;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -12,23 +16,67 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
+
+import javax.annotation.Nullable;
 
 public class Sponsors extends AppCompatActivity {
 
     //private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
     FlowingDrawer mDrawer;
+    private WebView webview;
+    String urlToLoad;
+    public static final String KEY_URL = "URL";
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private DocumentReference dbref = db.collection("URLS").document("SPONSORS");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sponsors);
-
+        webview = findViewById(R.id.webview);
+        webview.setWebViewClient(new WebViewClient());
+        WebSettings webSettings = webview.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         setupToolbar();
         setupMenu();
+
+        dbref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if (documentSnapshot.exists()) {
+                    urlToLoad = documentSnapshot.getString(KEY_URL);
+
+
+
+                } else {
+                    Toast.makeText(Sponsors.this, "doesn't exist", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(Sponsors.this, "Please Enable Mobile Data", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+webview.loadUrl(urlToLoad);
 
         /*drawerLayout=findViewById(R.id.drawer2);
 
@@ -102,7 +150,7 @@ public class Sponsors extends AppCompatActivity {
 
     private void setupMenu() {
         FragmentManager fm = getSupportFragmentManager();
-        NavigationFragment mMenuFragment = (NavigationFragment)fm.findFragmentById(R.id.id_container_menu);
+        NavigationFragment mMenuFragment = (NavigationFragment) fm.findFragmentById(R.id.id_container_menu);
         if (mMenuFragment == null) {
             mMenuFragment = new NavigationFragment();
             fm.beginTransaction().add(R.id.id_container_menu, mMenuFragment).commit();
@@ -139,7 +187,7 @@ public class Sponsors extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if(actionBarDrawerToggle.onOptionsItemSelected(item))
+        if (actionBarDrawerToggle.onOptionsItemSelected(item))
             return true;
         return super.onOptionsItemSelected(item);
     }
@@ -152,9 +200,29 @@ public class Sponsors extends AppCompatActivity {
             finish();
         }
     }
+
     @Override
     public void finish() {
         super.finish();
-        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    protected void onStart() {
+        super.onStart();
+        dbref.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                if (e != null) {
+                    Toast.makeText(Sponsors.this, "error while loading", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (documentSnapshot.exists()) {
+                    urlToLoad = documentSnapshot.getString(KEY_URL);
+
+                        webview.loadUrl(urlToLoad);
+                }
+            }
+        });
+
     }
 }

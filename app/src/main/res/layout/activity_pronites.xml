@@ -14,15 +14,108 @@
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
         android:orientation="vertical">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rvFeed"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="none"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="false"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarFadeDuration="100"
+            android:scrollbarSize="4dp"
+            android:scrollbarThumbVertical="@color/scroll">
+
+            <LinearLayout
+                android:id="@+id/activity_show_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/p1"
+                    android:layout_width="350dp"
+                    android:layout_height="500dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="10dp" />
+
+                <ImageView
+                    android:id="@+id/p2"
+                    android:layout_width="350dp"
+                    android:layout_height="500dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp" />
+
+                <ImageView
+                    android:id="@+id/p3"
+                    android:layout_width="350dp"
+                    android:layout_height="500dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp" />
+
+                <ImageView
+                    android:id="@+id/p4"
+                    android:layout_width="350dp"
+                    android:layout_height="500dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp" />
+                <ImageView
+                    android:id="@+id/p5"
+                    android:layout_width="350dp"
+                    android:layout_height="500dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="10dp" />
+
+                <ImageView
+                    android:id="@+id/p6"
+                    android:layout_width="350dp"
+                    android:layout_height="500dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp" />
+
+                <ImageView
+                    android:id="@+id/p7"
+                    android:layout_width="350dp"
+                    android:layout_height="500dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp" />
+
+                <ImageView
+                    android:id="@+id/p8"
+                    android:layout_width="350dp"
+                    android:layout_height="500dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp" />
+                <ImageView
+                    android:id="@+id/p9"
+                    android:layout_width="350dp"
+                    android:layout_height="500dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="90dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp" />
+
+            </LinearLayout>
+        </ScrollView>
 
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appBarLayout"

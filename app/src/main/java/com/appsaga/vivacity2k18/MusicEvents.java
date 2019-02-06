@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 
 public class MusicEvents extends AppCompatActivity {
     Animation animation;
-    int DELAY = 1000;
+    int DELAY = 500;
     Handler handler;
 
     @Override
@@ -26,7 +26,7 @@ public class MusicEvents extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.solendious:
 
-                animation = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.solendious)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -39,7 +39,7 @@ public class MusicEvents extends AppCompatActivity {
 
                 break;
             case R.id.mescolanza:
-                animation = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.mescolanza)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -52,7 +52,7 @@ public class MusicEvents extends AppCompatActivity {
 
                 break;
             case R.id.verismo:
-                animation = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.verismo)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -64,7 +64,7 @@ public class MusicEvents extends AppCompatActivity {
 
                 break;
             case R.id.swaranjali:
-                animation = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.swaranjali)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -76,7 +76,7 @@ public class MusicEvents extends AppCompatActivity {
 
                 break;
             case R.id.duetsong:
-                animation = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.duetsong)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -88,7 +88,7 @@ public class MusicEvents extends AppCompatActivity {
 
                 break;
             case R.id.antakshari:
-                animation = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.antakshari)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -100,7 +100,7 @@ public class MusicEvents extends AppCompatActivity {
 
                 break;
             case R.id.rap:
-                animation = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.rap)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {

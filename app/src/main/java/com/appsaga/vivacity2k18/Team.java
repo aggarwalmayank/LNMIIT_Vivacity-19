@@ -103,14 +103,32 @@ public class Team extends AppCompatActivity {
 
         final FoldingCell tc1 = (FoldingCell) findViewById(R.id.tc1);
         final FoldingCell tc2 = (FoldingCell) findViewById(R.id.tc2);
-        final FoldingCell tc3 = (FoldingCell) findViewById(R.id.tc3);
         final FoldingCell tc4 = (FoldingCell) findViewById(R.id.tc4);
         final FoldingCell tc5 = (FoldingCell) findViewById(R.id.tc5);
         final FoldingCell tc6 = (FoldingCell) findViewById(R.id.tc6);
         final FoldingCell tc7 = (FoldingCell) findViewById(R.id.tc7);
-        final FoldingCell tc8 = (FoldingCell) findViewById(R.id.tc8);
-        final FoldingCell tc9 = (FoldingCell) findViewById(R.id.tc9);
+        final FoldingCell tc15 = (FoldingCell) findViewById(R.id.tc15);
+
+
         final FoldingCell tc10 = (FoldingCell) findViewById(R.id.tc10);
+        final FoldingCell tc11 = (FoldingCell) findViewById(R.id.tc11);
+        tc11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tc11.toggle(false);
+            }
+        });
+
+
+        final FoldingCell tc12 = (FoldingCell) findViewById(R.id.tc12);
+        tc12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tc12.toggle(false);
+            }
+        });
+
+
 
         tc1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,12 +142,7 @@ public class Team extends AppCompatActivity {
                 tc2.toggle(false);
             }
         });
-        tc3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tc3.toggle(false);
-            }
-        });
+
         tc4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -154,22 +167,17 @@ public class Team extends AppCompatActivity {
                 tc7.toggle(false);
             }
         });
-        tc8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tc8.toggle(false);
-            }
-        });
-        tc9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tc9.toggle(false);
-            }
-        });
+
         tc10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 tc10.toggle(false);
+            }
+        });
+        tc15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tc15.toggle(false);
             }
         });
     }

@@ -1,11 +1,17 @@
 package com.appsaga.vivacity2k18;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -24,10 +30,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.hitomi.cmlibrary.CircleMenu;
 import com.hitomi.cmlibrary.OnMenuSelectedListener;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
+import com.uber.sdk.android.core.UberSdk;
+import com.uber.sdk.android.rides.RideParameters;
+import com.uber.sdk.android.rides.RideRequestButton;
+import com.uber.sdk.rides.client.SessionConfiguration;
+
+import javax.annotation.Nullable;
 
 public class First extends AppCompatActivity {
 
@@ -41,13 +60,21 @@ public class First extends AppCompatActivity {
     TextView onGoing;
     TextView funEvents;
     TextView pronites;
-
+    private  String bustt;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private DocumentReference dbref = db.collection("URLS").document("BUS");
+    public static final String KEY_TT = "link";
     FlowingDrawer mDrawer;
     private CircleMenu circleMenu;
     int DELAY = 1000;
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
+
+    double longitude;
+    double latitude;
+    RideRequestButton requestButton;
+    SessionConfiguration config;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,14 +83,15 @@ public class First extends AppCompatActivity {
 
         setupToolbar();
         setupMenu();
-        ImageView aboutus=(ImageView)findViewById(R.id.about);
+        ImageView aboutus = (ImageView) findViewById(R.id.about);
         aboutus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(First.this,AboutUs.class));
+                startActivity(new Intent(First.this, AboutUs.class));
             }
         });
-        /*Event = findViewById(R.id.Events);
+
+                /*Event = findViewById(R.id.Events);
 
         Event.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -307,6 +335,43 @@ public class First extends AppCompatActivity {
 
         );
 
+        dbref.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if (documentSnapshot.exists()) {
+                    bustt= documentSnapshot.getString(KEY_TT);
+                } else {
+                    Toast.makeText(First.this, "doesn't exist", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(First.this, "Please Enable Mobile Data", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+    }
+
+    public void search(View view){
+
+        RideParameters rideParams = new RideParameters.Builder()
+                // Optional product_id from /v1/products endpoint (e.g. UberX). If not provided, most cost-efficient product will be used
+                .setProductId("a1111c8c-c720-46c3-8534-2fcdd730040d")
+                // Required for price estimates; lat (Double), lng (Double), nickname (String), formatted address (String) of dropoff location
+                .setDropoffLocation(
+                        26.937963, 75.922669, "LNMIIT", "LNMIIT")
+                // Required for pickup estimates; lat (Double), lng (Double), nickname (String), formatted address (String) of pickup location
+                .setPickupLocation(latitude, longitude, "Start Point", "Start Point")
+                .build();
+        // set parameters for the RideRequestButton instance
+        //requestButton.setRideParameters(rideParams);
+
+        //ServerTokenSession session = new ServerTokenSession(config);
+        //requestButton.setSession(session);
+
+        //requestButton.loadRideInformation();
     }
 
     @Override
@@ -371,18 +436,51 @@ public class First extends AppCompatActivity {
         if (index == 0)
             startActivity(new Intent(this, Events.class));
         else if (index == 1) {
-            String url = "https://www.lnmiit.ac.in/uploaded_Files/Bus_time_Table_15-10-2018.pdf";
             Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url));
+            i.setData(Uri.parse(bustt));
             startActivity(i);
         } else if (index == 2)
             startActivity(new Intent(this, Pronites.class));
         else if (index == 3)
             startActivity(new Intent(this, ContactUs.class));
         else if (index == 4)
-            startActivity(new Intent(this, Team.class));
+            startActivity(new Intent(this, AllTeam.class));
 
         else if (index == 5)
             startActivity(new Intent(this, FunEvents.class));
+    }
+    public void insta(View v){
+        String socialNetwork = "https://www.instagram.com/vivacity_lnmiit/";
+        startActivity(Intent.createChooser(new Intent(Intent.ACTION_VIEW, Uri.parse(socialNetwork)), "Open with:"));
+    }
+
+    public void fb(View v){
+        String socialNetwork = "https://www.facebook.com/Vivacity.LNMIIT/";
+        startActivity(Intent.createChooser(new Intent(Intent.ACTION_VIEW, Uri.parse(socialNetwork)), "Open with:"));
+    }
+
+    public void yt(View v){
+        String socialNetwork = "https://bit.ly/2Dbfpsl";
+        startActivity(Intent.createChooser(new Intent(Intent.ACTION_VIEW, Uri.parse(socialNetwork)), "Open with:"));
+    }
+    protected void onStart() {
+        super.onStart();
+
+        super.onStart();
+        dbref.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                if(e!=null){
+                    Toast.makeText(First.this, "error while loading", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(documentSnapshot.exists()){
+                    bustt=documentSnapshot.getString(KEY_TT);
+                }
+            }
+        });
+
+
+
     }
 }

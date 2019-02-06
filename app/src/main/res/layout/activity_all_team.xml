@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mxn.soul.flowingdrawer_core.FlowingDrawer
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/drawerlayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:clipChildren="false"
+android:clipToPadding="false"
+app:edPosition="1"
+app:edMenuSize="260dp"
+app:edMenuBackground="#dddddd">
+
+<!--content-->
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_feed_toolbar"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--content-->
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/content1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CORE TEAM"
+                android:onClick="core"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="35sp"
+                android:layout_marginBottom="40dp"
+                android:id="@+id/team"
+                android:fontFamily="@font/spray"/>
+
+            <TextView
+                android:onClick="core"
+                android:layout_below="@id/team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="OUR TEAM"
+                android:textColor="#ffffff"
+                android:id="@+id/ourteam"
+                android:textSize="35sp"
+                android:fontFamily="@font/spray"/>
+
+
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</android.support.design.widget.CoordinatorLayout>
+
+
+<!--menu-->
+<com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
+    android:id="@+id/menulayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/id_container_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
+
+</com.mxn.soul.flowingdrawer_core.FlowingDrawer>

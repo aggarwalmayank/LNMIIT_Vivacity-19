@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back_main"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,33 +33,55 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_gravity="start"
-                android:layout_marginLeft="16dp"
-                android:layout_weight="1"
+           <!-- <TextView
                 android:id="@+id/flashfolksday"
-                android:textColor="#ffff" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_gravity="start"
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
+                android:textColor="#ffff" />
+-->
+            <TextView
                 android:id="@+id/flashfolkstime"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
                 android:textColor="#ffff" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/flashfolksvenue"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
             android:layout_alignParentRight="true"
-            android:textColor="#ffffff" />
+            android:orientation="vertical">
+<!--
+            <TextView
+                android:id="@+id/flashfolksvenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:textColor="#ffffff" />
 
+-->
+            <blink
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duration="500">
+
+                <TextView
+                    android:id="@+id/regflashfolks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="16dp"
+                    android:text="REGISTER"
+                    android:textColor="#ffffff" />
+            </blink>
+
+        </LinearLayout>
     </RelativeLayout>
 
     <View
@@ -79,90 +101,87 @@
         android:scrollbarFadeDuration="100"
         android:scrollbarSize="4dp"
         android:scrollbarThumbVertical="@color/scroll">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginRight="10dp">
+
             <LinearLayout
                 android:id="@+id/details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <blink
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:duration="500">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:layout_marginTop="25dp"
-                        android:text="RULES :-"
-                        android:textSize="20sp"
-                        android:textColor="#ffffff" />
-                </blink>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_marginTop="25dp"
+                    android:text="RULES :-"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/bullet"
                     android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
                     android:text="Registration is mandatory."
                     android:textColor="#ffffff" />
 
                 <TextView
-                    android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:drawableLeft="@drawable/bullet"
                     android:text="No camera restrictions, Photos must meet the following requirements: JPG or JPEG file format."
                     android:textColor="#ffffff" />
 
                 <TextView
-                    android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:drawableLeft="@drawable/bullet"
                     android:text="Photographs should not have been previously published in any print and digital media."
                     android:textColor="#ffffff" />
 
                 <TextView
-                    android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:drawableLeft="@drawable/bullet"
                     android:text="Minimal photos editing is permissible , but altering the photographs is not allowed. We assume that every photo submission is legitimate.However , if a photo is suspected of alteration , it will be rejected. The final decision rests with the Vivacity Controls"
                     android:textColor="#ffffff" />
 
                 <TextView
-                    android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:drawableLeft="@drawable/bullet"
                     android:text="By submitting your photographs you accept that you are the copyright owner of the photograph and that you agree to our terms and conditions."
                     android:textColor="#ffffff" />
 
                 <TextView
-                    android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:drawableLeft="@drawable/bullet"
                     android:text="Every picture should have a suitable caption pertaining to the theme."
                     android:textColor="#ffffff" />
 
                 <TextView
-                    android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:drawableLeft="@drawable/bullet"
                     android:text="Theme for the event will be released through our social media platform"
                     android:textColor="#ffffff" />
 
                 <TextView
-                    android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:drawableLeft="@drawable/bullet"
                     android:text="It must be clicked between 1 february - 3 february."
                     android:textColor="#ffffff" />
@@ -172,65 +191,47 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
+                    android:layout_marginBottom="5dp"
                     android:text="Judging Criteria:"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:layout_marginBottom="5dp"
                     android:textColor="#ffffff"
                     android:textStyle="italic|bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/bullet"
                     android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
                     android:text="Creativity"
                     android:textColor="#ffffff" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/bullet"
                     android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
                     android:text="Aesthetic Appeal"
                     android:textColor="#ffffff" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/bullet"
                     android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
                     android:text="Technical Skills displayed"
                     android:textColor="#ffffff" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/bullet"
                     android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/bullet"
                     android:text="Theme representation"
                     android:textColor="#ffffff" />
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_below="@id/details"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="30dp"
-                android:layout_alignParentBottom="true"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="start"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="contact1"
-                    android:textColor="#ffffff"
-                    android:text="Mayank Aggarwal\n+91-9460560912"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:gravity="end"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="contact2"
-                    android:textColor="#ffffff"
-                    android:text="Mayank Aggarwal\n+91-9460560912"/>
-            </LinearLayout>
+
+
         </RelativeLayout>
 
     </ScrollView>

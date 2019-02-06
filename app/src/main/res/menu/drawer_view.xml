@@ -27,6 +27,11 @@
             android:icon="@drawable/ic_bus"
             app:showAsAction="ifRoom"/>
 
+        <item android:id="@+id/event_schedule"
+            android:title="Event Schedule"
+            android:icon="@drawable/ic_calendar"
+            app:showAsAction="ifRoom"/>
+
     <item android:id="@+id/onGoing"
         android:title="@string/ongoing"
         android:icon="@drawable/ic_ongoing"

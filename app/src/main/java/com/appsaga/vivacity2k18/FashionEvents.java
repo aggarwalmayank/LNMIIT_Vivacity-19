@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 
 public class FashionEvents extends AppCompatActivity {
     Animation animation;
-    int DELAY = 1000;
+    int DELAY = 500;
     Handler handler;
 
     @Override
@@ -26,7 +26,7 @@ public class FashionEvents extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.vogue:
 
-                animation = AnimationUtils.loadAnimation(this, R.anim.top_to_bottom);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.vogue)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -39,13 +39,25 @@ public class FashionEvents extends AppCompatActivity {
 
                 break;
             case R.id.campus:
-                animation = AnimationUtils.loadAnimation(this, R.anim.bottom_to_top);
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
                 ((ImageButton) findViewById(R.id.campus)).startAnimation(animation);
                 handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         startActivity(new Intent(FashionEvents.this,CampusPrincess.class));
+                    }
+                }, DELAY);
+
+                break;
+            case R.id.mrmrsviva:
+                animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
+                ((ImageButton) findViewById(R.id.mrmrsviva)).startAnimation(animation);
+                handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(new Intent(FashionEvents.this,MrMrsVivacity.class));
                     }
                 }, DELAY);
 
